@@ -16,8 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -29,25 +27,35 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+# gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'pry-rails', group: [:development, :test]
+gem 'jquery-rails'
+gem 'dotenv-rails', group: [:development, :test]
+gem 'rspec-rails', '3.8.2', group: [:development, :test]
+gem 'capybara', group: [:development, :test]
+gem 'launchy', group: [:development, :test]
+gem 'factory_bot', group: [:development, :test]
+gem 'faraday'
+gem 'database_cleaner', group: [:development, :test]
+gem 'valid_attribute', group: [:development, :test]
+gem 'shoulda-matchers', group: [:development, :test], require: false
+gem 'foundation-rails', '~> 6.5'
 gem "react_on_rails", "11.0.0"
 gem "webpacker", "~> 3"
-gem 'mini_racer', platforms: :ruby
+# gem 'mini_racer', platforms: :ruby
