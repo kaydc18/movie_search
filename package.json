@@ -5,6 +5,10 @@
     "node": ">=6.0.0",
     "yarn": ">=0.25.2"
   },
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
